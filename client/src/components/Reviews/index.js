@@ -50,6 +50,7 @@ class ReviewView extends Component {
     )
 
   render() {
+    console.log(this.props)
     let reviews = this.props.reviews;
     return (
         <div>
