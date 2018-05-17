@@ -57,6 +57,8 @@ app.post('/api/review', (req,res)=> {
   const review = new Review(req.body);
 
   review.save((err,doc)=>{
+    console.log("Posting now...")
+    console.log(doc)
     if (err) return res.status(400).send(err);
     res.status(200).json({
       post: true,
@@ -82,9 +84,7 @@ app.delete('/api/delete_review', (req,res)=>{
 
   Review.findByIdAndRemove(id, (err, doc)=>{
     if (err) return res.status(400).send(err);
-    res.json({
-      success: true,
-    })
+    res.json(true)
   })
 })
 
