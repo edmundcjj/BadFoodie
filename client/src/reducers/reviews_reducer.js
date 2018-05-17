@@ -18,7 +18,6 @@ export default function(state={}, action){
         reviewer: action.payload.reviewer
       }
 
-
     default:
       return state;
   }
