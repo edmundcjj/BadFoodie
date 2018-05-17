@@ -5,6 +5,18 @@ const reviewSchema = mongoose.Schema({
     type: String,
     required: true,
   },
+  restaurantOwner:{
+    type: String,
+    required: true,
+  },
+  cuisine:{
+    type: String,
+    required: true,
+  },
+  avgPrice:{
+    type: String,
+    required: true,
+  },
   review:{
     type: String,
     default: 'n/a'
